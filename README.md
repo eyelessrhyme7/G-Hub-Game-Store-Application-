@@ -1,4 +1,4 @@
-# G-Hub-GameStoreApplication
+# G-Hub_GameStoreApplication
 
 The gaming industry has seen a huge upheaval in popularity. They are becoming 
 an integral part of a common man’s life. Game stores can be found almost 
