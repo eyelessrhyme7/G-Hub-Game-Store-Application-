@@ -1,0 +1,74 @@
+create database ghub;
+use ghub;
+
+create table Consoles
+(Developer varchar(20),
+ID int primary key,
+Console_Name varchar(30),
+Store_Price int,
+Devloper_Price int,
+Console_Type varchar(10),
+Release_Year int,
+Stock int,
+Sales int,
+Revenue int,
+List_Status boolean);
+
+insert into Consoles
+values
+("Microsoft", 1, "XBOX ONE S", 400, 200, "Home", 2016, 5, 0, 0, True ),
+("Microsoft", 2, "XBOX SERIES X", 700, 550, "Home", 2020, 20, 0, 0, True),
+("Microsoft", 3, "XBOX SERIES S", 500, 300, "Home", 2020, 10, 0, 0, True),
+("Sony", 4, "PS4 Pro", 600, 400, "Home", 2017, 10, 0, 0, True),
+("Sony", 5, "PS5", 750, 550, "Home", 2020, 30, 0, 0, True),
+("Sony", 6, "PSP", 200, 100, "Handheld", 2008, 5, 0, 0, True),
+("Nintendo", 7, "Nintendo Switch", 400, 250, "Hybrid", 2017, 20, 0, 0, True),
+("Nintendo", 8, "Nintendo 3DS", 250, 150, "Handheld", 2012, 5, 0, 0, True),
+("Nintendo", 9, "Nintendo Switch Lite", 300, 200, "Handheld", 2021, 10, 0, 0, False)
+;
+select * from Consoles;
+
+create table Games
+(Developer varchar(20),
+ID int primary key,
+Game_Name varchar(30),
+Store_Price int,
+Devloper_Price int,
+Game_Genre varchar(10),
+Release_Year int,
+Stock_Overall int,
+Stock_PS int,
+Stock_XBOX int,
+Stock_Nintendo int,
+Sales_Overall int,
+Sales_PS int,
+Sales_XBOX int,
+Sales_Nintendo int,
+Revenue_Overall int,
+Revenue_PS int,
+Revenue_XBOX int,
+Revenue_Nintendo int,
+List_Status boolean);
+
+insert into Games values
+("Rockstar", 1, "GTA V", 50, 20, "Open-World", 2013, 20, 15, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, True),
+("Ubisoft", 2, "Assassin Creed : Valhalla", 80, 50, "Open-World", 2020, 20, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, True),
+("Naughty Dog", 3, "Uncharted 4", 60, 40, "Adventure", 2016, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, True),
+("Electronic Arts", 4, "FIFA 21", 70, 45, "Sports", 2020, 30, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, True),
+("Microsoft", 5, "Halo Infinite", 80, 60, "FPS", 2021, 20, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, True),
+("Nintendo", 6, "Mario Bros", 50, 30, "Platformer", 2018, 10, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, True);
+
+select * from Games;
+
+create table Genre
+(Game_Genre varchar(30),
+Games int);
+
+insert into Genre values
+("Open-World", 2),
+("Adventure", 1),
+("Sports", 1),
+("FPS", 1),
+("Platformer", 1);
+
+select * from Consoles;
